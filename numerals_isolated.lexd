@@ -1,0 +1,62 @@
+PATTERNS
+NumRoot1 OneSuf1 # 1
+NumRoot2 OneSuf2 # 2
+(NumRoot3|NumRoot4|NumRoot5-9|NumRoot10) OneSuf3-10 # 3-10
+Num11-19 # 11-19
+((NumRoot2|NumRoot3|NumRoot4) XSuf)? Twenty # 20, 40, 60, 80
+NumRoot100 OneSuf100 # 100
+(NumRoot2|NumRoot3|NumRoot4|NumRoot5-9) NumRoot100 # 200-900 # phon: шв > ышв/вы
+((NumRoot2|NumRoot3|NumRoot4|NumRoot5-9|NumRoot10) XSuf)? Thousand # 1000-10000 # phon: жваынзыкь > жванзыкь
+Num11-19 XSuf Thousand # 11000-19000
+
+PATTERN Num11-19
+NumRoot10 (NumRoot1|NumRoot2|NumRoot3|NumRoot4|NumRoot5-9)
+
+LEXICON NumRoot1
+з
+
+LEXICON NumRoot2
+гӏв
+
+LEXICON NumRoot3
+х
+
+LEXICON NumRoot4
+пщ
+
+LEXICON NumRoot5-9
+хв
+ц
+быжь
+агӏ
+жв
+
+LEXICON NumRoot10
+жва # phon: жв/жви/жвы
+
+LEXICON NumRoot100
+шв
+
+LEXICON Twenty
+гӏважва
+
+LEXICON Thousand
+зыкь # phon: зыкь > зкьы
+LEXICON XSuf
+ын
+
+LEXICON OneSuf1
+<n>:акӏы
+<h>:аджвы
+
+LEXICON OneSuf2
+<n>:ба
+<h>:джь # phon: ыджь
+
+LEXICON OneSuf3-10
+<n>:ба # phon: хпа
+<h>:гӏвы
+
+LEXICON OneSuf100
+<n>:кӏы
+<h>:гӏвы
