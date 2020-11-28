@@ -1,49 +1,60 @@
+PATTERN Num11-19
+NumRoot10 Link[link_add] (NumRoot1|NumRoot2|NumRoot3|NumRoot4|NumRoot5-9)[link_add] # 11-19
+NumRoot10 Link[link_shwa] (NumRoot1|NumRoot2|NumRoot3|NumRoot4|NumRoot5-9)[link_shwa] # 11-19
+NumRoot10 Link[link_e] (NumRoot1|NumRoot2|NumRoot3|NumRoot4|NumRoot5-9)[link_e] # 11-19
+NumRoot10 Link[no_link] (NumRoot1|NumRoot2|NumRoot3|NumRoot4|NumRoot5-9)[no_link] # 11-19
+
 PATTERNS
 NumRoot1 OneSuf1 # 1
 NumRoot2 OneSuf2 # 2
 (NumRoot3|NumRoot4|NumRoot5-9|NumRoot10) OneSuf3-10 # 3-10
-Num11-19 # 11-19
-((NumRoot2|NumRoot3|NumRoot4) XSuf)? Twenty # 20, 40, 60, 80
+Num11-19
+((NumRoot2|NumRoot3|NumRoot4) Iter)? Twenty # 20, 40, 60, 80
 NumRoot100 OneSuf100 # 100
 (NumRoot2|NumRoot3|NumRoot4|NumRoot5-9) NumRoot100 # 200-900 # phon: шв > ышв/вы
-((NumRoot2|NumRoot3|NumRoot4|NumRoot5-9|NumRoot10) XSuf)? Thousand # 1000-10000 # phon: жваынзыкь > жванзыкь
-Num11-19 XSuf Thousand # 11000-19000
+((NumRoot2|NumRoot3|NumRoot4|NumRoot5-9|NumRoot10) Iter)? Thousand # 1000-10000
+Num11-19 Iter Thousand # 11000-19000
 
-PATTERN Num11-19
-NumRoot10 (NumRoot1|NumRoot2|NumRoot3|NumRoot4|NumRoot5-9)
 
 LEXICON NumRoot1
-з
+зы<num>:зы[link_add]
 
 LEXICON NumRoot2
-гӏв
+гӏвы<num>:гӏвы[link_shwa]
 
 LEXICON NumRoot3
-х
+хы<num>:хы[no_link]
 
 LEXICON NumRoot4
-пщ
+пщы<num>:пщы[link_add]
 
 LEXICON NumRoot5-9
-хв
-ц
-быжь
-агӏ
-жв
+хвы<num>:хвы[link_shwa]
+цы<num>:цы[link_add]
+быжь<num>:быжь[link_add]
+агӏы<num>:агӏы[no_link]
+жвы<num>:жвы[link_e]
 
 LEXICON NumRoot10
-жва # phon: жв/жви/жвы
+жва<num>:жва
 
 LEXICON NumRoot100
-шв
+швы<num>:швы
 
 LEXICON Twenty
-гӏважва
+гӏважва<num>:гӏважва
 
 LEXICON Thousand
-зыкь # phon: зыкь > зкьы
-LEXICON XSuf
-ын
+зыкь<num>:зыкь # phon: зыкь > зкьы
+
+LEXICON Iter
+<iter>:н
+
+LEXICON Link
+<link>:и[link_add]
+<link>:ы[link_shwa]
+<link>:е[link_e]
+<link>:[no_link]
 
 LEXICON OneSuf1
 <n>:акӏы
