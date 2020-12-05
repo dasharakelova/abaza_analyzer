@@ -7,7 +7,9 @@ NumRoot10 Link[no_link] (NumRoot1|NumRoot2|NumRoot3|NumRoot4|NumRoot5-9)[no_link
 PATTERNS
 NumRoot1 OneSuf1 # 1
 NumRoot2 OneSuf2 # 2
-(NumRoot3|NumRoot4|NumRoot5-9|NumRoot10) OneSuf3-10 # 3-10
+(NumRoot3|NumRoot4|NumRoot5-9|NumRoot10)[3] OneSuf3-10[3] # 3
+(NumRoot3|NumRoot4|NumRoot5-9|NumRoot10)[-3] OneSuf3-10[-3] # 4-10
+
 Num11-19
 ((NumRoot2|NumRoot3|NumRoot4) Iter)? Twenty # 20, 40, 60, 80
 NumRoot100 OneSuf100 # 100
@@ -23,7 +25,7 @@ LEXICON NumRoot2
 гӏвы<num>:гӏвы[link_shwa]
 
 LEXICON NumRoot3
-хы<num>:хы[no_link]
+хы<num>:хы[no_link,3]
 
 LEXICON NumRoot4
 пщы<num>:пщы[link_add]
@@ -62,10 +64,11 @@ LEXICON OneSuf1
 
 LEXICON OneSuf2
 <n>:ба
-<h>:джь # phon: ыджь
+<h>:джь
 
 LEXICON OneSuf3-10
-<n>:ба # phon: хпа
+<n>:ба
+<n>:па[3]
 <h>:гӏвы
 
 LEXICON OneSuf100
