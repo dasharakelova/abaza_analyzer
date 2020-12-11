@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := numerals_isolated.ana.hfst
+.DEFAULT_GOAL := check
 %.lexd.hfst: %.lexd
 	lexd $< | hfst-txt2fst -o $@
 %.ana.hfst: %.gen.hfst
@@ -7,3 +7,7 @@
 	hfst-twolc $< -o $@
 %.gen.hfst: %.lexd.hfst %.twol.hfst
 	hfst-compose-intersect $^ -o $@
+check-gen: numerals_isolated.lexd.hfst pairtest.txt
+	bash compare.sh $^
+check: check-gen
+
