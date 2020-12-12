@@ -19,7 +19,7 @@
 жва<num><n>:жваба
 жва<num><h>:жвагӏвы
 жва<num><link>зы<num>:жвизы
-жва<num><link>гӏв<num>:жвыгӏвы
+жва<num><link>гӏвы<num>:жвыгӏвы
 жва<num><link>хы<num>:жвахы
 жва<num><link>пщы<num>:жвипщы
 жва<num><link>хвы<num>:жвыхвы
@@ -47,7 +47,7 @@
 пщы<num><iter>зыкь<num>:пщынзыкь
 хвы<num><iter>зыкь<num>:хвынзыкь
 цы<num><iter>зыкь<num>:цынзыкь
-быжь<num><iter>зыкь<num>:быжьнзыкь #
+быжь<num><iter>зыкь<num>:быжьнзыкь
 агӏы<num><iter>зыкь<num>:агӏынзыкь
 жвы<num><iter>зыкь<num>:жвынзыкь
 жва<num><iter>зыкь<num>:жванзыкь
@@ -57,6 +57,6 @@
 жва<num><link>пщы<num><iter>зыкь<num>:жвипщынзыкь
 жва<num><link>хвы<num><iter>зыкь<num>:жвыхвынзыкь
 жва<num><link>цы<num><iter>зыкь<num>:жвицынзыкь
-жва<num><link>быжь<num><iter>зыкь<num>:жвибыжьнзыкь #
+жва<num><link>быжь<num><iter>зыкь<num>:жвибыжьнзыкь
 жва<num><link>агӏы<num><iter>зыкь<num>:жвагӏынзыкь
 жва<num><link>жвы<num><iter>зыкь<num>:жвежвынзыкь
