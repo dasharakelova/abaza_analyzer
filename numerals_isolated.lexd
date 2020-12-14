@@ -12,8 +12,9 @@ NumRoot2 OneSuf2 # 2
 
 Num11-19
 ((NumRoot2|NumRoot3|NumRoot4) Iter)? Twenty # 20, 40, 60, 80
-NumRoot100 OneSuf100 # 100
-(NumRoot2|NumRoot3|NumRoot4|NumRoot5-9) NumRoot100 # 200-900 # phon: шв > ышв/вы
+NumRoot700-900 OneSuf100 # 100
+(NumRoot2|NumRoot3|NumRoot4|NumRoot5-9[|[5,6]]) NumRoot200-600 # 200-900 # phon: шв > ышв/вы
+NumRoot5-9[|[7,8,9]]                            NumRoot700-900 # 200-900 # phon: шв > ышв/вы
 ((NumRoot2|NumRoot3|NumRoot4|NumRoot5-9|NumRoot10) Iter)? Thousand # 1000-10000
 Num11-19 Iter Thousand # 11000-19000
 
@@ -22,38 +23,42 @@ LEXICON NumRoot1
 зы<num>:зы[link_add]
 
 LEXICON NumRoot2
-гӏвы<num>:гӏвы[link_shwa]
+гӏвы<num>:гӏвы{D}[link_shwa]
 
 LEXICON NumRoot3
-хы<num>:хы[no_link,3]
+хы<num>:хы{R}[no_link,3]
 
 LEXICON NumRoot4
-пщы<num>:пщы[link_add]
+пщы<num>:пщы{D}[link_add]
 
 LEXICON NumRoot5-9
-хвы<num>:хвы[link_shwa]
-цы<num>:цы[link_add]
-быжь<num>:быжь[link_add]
-агӏы<num>:агӏы[no_link]
-жвы<num>:жвы[link_e]
+хвы<num>:хвы{R}[link_shwa,5]
+цы<num>:цы{D}[link_add,6]
+#быжь<num>:б{ы}жьы{D}[link_add,7]
+быжь<num>:бы{D}жь[link_add,7]
+агӏы<num>:а{R}гӏы{R}[no_link,8]
+жвы<num>:жвы{R}[link_e,9]
 
 LEXICON NumRoot10
-жва<num>:жва
+жва<num>:жва{D}
 
-LEXICON NumRoot100
-швы<num>:швы
+LEXICON NumRoot200-600
+швы<num>:швы{R}
+
+LEXICON NumRoot700-900
+швы<num>:швы{D}
 
 LEXICON Twenty
 гӏважва<num>:гӏважва
 
 LEXICON Thousand
-зыкь<num>:зыкь # phon: зыкь > зкьы
+зыкь<num>:з{ы}кьы{R} # phon: зыкь > зкьы
 
 LEXICON Iter
-<iter>:н
+<iter>:ны{D}
 
 LEXICON Link
-<link>:и[link_add]
+<link>:и{R}[link_add]
 <link>:ы[link_shwa]
 <link>:е[link_e]
 <link>:[no_link]
@@ -63,15 +68,15 @@ LEXICON OneSuf1
 <h>:аджвы
 
 LEXICON OneSuf2
-<n>:ба
+<n>:ба{D}
 <h>:джь
 
 LEXICON OneSuf3-10
-<n>:ба
-<n>:па[3]
-<h>:гӏвы[3]
-<h>:гӏвы
+<n>:ба{D}
+<n>:па{D}[3]
+<h>:гӏвы{D}[3]
+<h>:гӏвы{D}
 
 LEXICON OneSuf100
-<n>:кӏы
-<h>:гӏвы
+<n>:кӏы{D}
+<h>:гӏвы{D}

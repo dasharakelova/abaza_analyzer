@@ -5,9 +5,13 @@
 	hfst-invert $< -o $@
 %.twol.hfst: %.twol
 	hfst-twolc $< -o $@
-%.gen.hfst: %.lexd.hfst %.twol.hfst
+%.pregen.hfst: %.lexd.hfst %.twol.hfst
 	hfst-compose-intersect $^ -o $@
-check-gen: numerals_isolated.gen.hfst pairtest.txt
+%.gen.hfst: %.pregen.hfst %.postgen.hfst
+	hfst-compose $^ -o $@
+%.postgen.hfst: drop-accent.twol.hfst
+	cp $< $@
+check-gen: numerals_isolated.gen.hfst pairtest2.txt
 	bash compare.sh $^
 check: check-gen
 

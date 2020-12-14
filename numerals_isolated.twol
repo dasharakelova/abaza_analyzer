@@ -1,11 +1,59 @@
 Alphabet
-п б ф в м у т д I н р ц з c ч ж ш щ ь ъ й л к г х а:0 е:0 и:0 ы:0 у:0 о:0 а е и ы у о D R F ;
-! 0:ы
+п б ф в м у т д I н р ц з c ч ж ш щ ь ъ й л к г х а:0 е:0 и:0 ы:0 у:0 о:0 а е и ы у о
+>:0
+%{F%}:0 %{D%}:0 %{R%}:0
+%{F%}:́  %{D%}:́  %{R%}:́   ! there are diacritics here for stress-marking
+
+%{ы%}:0 %{ы%}:ы ! CCы -> CыC rule
+;
 
 Sets
+C = п б ф в м т д I н р ц з c ч ж ш щ ь ъ й л к г х ;
+VV = а е и у о ;
 V = а е и ы у о ;
 Son = н р л й м ;
 
+Stress = ́;
+
+F = %{F%};
+D = %{D%};
+R = %{R%};
+
+AC = %{F%} %{D%} %{R%} ;
+
 Rules
 "vowel claster"
-V:0 <=> _ V ;
+VV:0 <=> _ V / [ AC: | :0 ] ;
+
+"unstressed schwa deletion"
+ы:0 <=> _ AC:0 ;
+        _ V / [ AC: | :0 ] ; ! and vowel cluster
+
+"CCы -> CыC"
+%{ы%}:ы <=> C+ _ C+ ы:0 ;
+
+"first opportunity for F and R"
+X:Stress /<= Y: :* _ ;
+    where X in ( F R R R )
+          Y in ( F F D R )
+	  matched;
+
+"stress on end of string D+, and only once"
+D:Stress /<=             _ [ \ AC:? ]* D: ;
+             D:Stress :* _ ;
+
+"stress class hierarchy"
+X:Stress /<=          _ :*   Y: ;
+               Y: :* _ ;
+    where X in ( D R R )
+          Y in ( F F D )
+	  matched;
+
+"stress exists"
+X:0 => $?:Stress _           ; ! if there is stress before _
+                 _ $?:Stress ; ! or stress after _
+       where X in ( F D R );
+
+"don't stress deleted vowel"
+X:0 <= V:0 _ ;
+       where X in ( F D R );
