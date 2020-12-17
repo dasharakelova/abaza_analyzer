@@ -23,7 +23,7 @@ AC = %{F%} %{D%} %{R%} ;
 
 Rules
 "vowel claster"
-VV:0 <=> _ V / [ AC: | :0 ] ;
+VV:0 <=> _ V: / [ AC: | :0 ] ;
 
 "unstressed schwa deletion"
 ы:0 <=> _ AC:0 ;
