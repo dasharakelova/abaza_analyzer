@@ -58,7 +58,7 @@ LEXICON Iter
 
 LEXICON Link
 <link>:и{R}[link_add]
-<link>:ы[link_shwa]
+<link>:ы{R}[link_shwa]
 <link>:е[link_e]
 <link>:[no_link]
 
