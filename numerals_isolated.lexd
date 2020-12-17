@@ -23,24 +23,23 @@ LEXICON NumRoot1
 зы<num>:зы[link_add]
 
 LEXICON NumRoot2
-гӏвы<num>:гӏвы{D}[link_shwa]
+гӏвы<num>:гӏвы{R}[link_shwa]
 
 LEXICON NumRoot3
 хы<num>:хы{R}[no_link,3]
 
 LEXICON NumRoot4
-пщы<num>:пщы{D}[link_add]
+пщы<num>:пщы{R}[link_add]
 
 LEXICON NumRoot5-9
 хвы<num>:хвы{R}[link_shwa,5]
-цы<num>:цы{D}[link_add,6]
-#быжь<num>:б{ы}жьы{D}[link_add,7]
-быжь<num>:бы{D}жь[link_add,7]
-агӏы<num>:а{R}гӏы{R}[no_link,8]
+цы<num>:цы{R}[link_add,6]
+быжь<num>:б{ы}жьы{R}[link_add,7]
+агӏы<num>:а{R}гӏ[no_link,8]
 жвы<num>:жвы{R}[link_e,9]
 
 LEXICON NumRoot10
-жва<num>:жва{D}
+жва<num>:жва{R}
 
 LEXICON NumRoot200-600
 швы<num>:швы{R}
