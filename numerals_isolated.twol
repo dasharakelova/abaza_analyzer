@@ -27,8 +27,8 @@ Rules
 VV:0 <=> _ V: / [ AC: | :0 ] ;
 
 "unstressed schwa deletion"
-ы:0 <=> _ AC:0 ;
-        _ V / [ AC: | :0 ] ; ! and vowel cluster
+ы:0 <=> [ .#. | C ] [ V: AC:0 ]* _ AC:0 [ V: AC:0 ]* [ C | .#. ] / [ 0:? ] ;
+        _ V: / [ AC: | :0 ] ; ! and vowel cluster
 
 "epenthetic schwa"
 0:ы <=> C [ ?:0 ]* _ Son C / [ ?:0 ] ;
@@ -37,18 +37,18 @@ VV:0 <=> _ V: / [ AC: | :0 ] ;
 %{ы%}:ы <=> C+ _ C+ ы:0 ;
 
 "first opportunity for F and R"
-X:Stress /<= Y: :* _ ;
+X:Stress /<= Y: :* C :* _ ;
     where X in ( F R R R )
           Y in ( F F D R )
 	  matched;
 
 "stress on end of string D+, and only once"
-D:Stress /<=             _ [ \ AC:? ]* D: ;
-             D:Stress :* _ ;
+D:Stress /<=             _ [ V AC:? ]* D: ;
+             D: :* _ ;
 
 "stress class hierarchy"
-X:Stress /<=          _ :*   Y: ;
-               Y: :* _ ;
+X:Stress /<=  [ .#. | C] [ \ AC:Stress ]* _ [ \ AC:Stress ]* C :*  Y: ;
+                 Y: :* C [ \ AC:Stress ]* _ [ \ AC:Stress ]* [ C | .#. ] ;
     where X in ( D R R )
           Y in ( F F D )
 	  matched;
@@ -58,6 +58,6 @@ X:0 => $?:Stress _           ; ! if there is stress before _
                  _ $?:Stress ; ! or stress after _
        where X in ( F D R );
 
-"don't stress deleted vowel"
-X:0 <= V:0 _ ;
+"transfer stress forward in vowel clusters"
+X:Stress <=  V:0 AC:Stress V _ ;
        where X in ( F D R );
