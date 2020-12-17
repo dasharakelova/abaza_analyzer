@@ -5,6 +5,7 @@ Alphabet
 %{F%}:́  %{D%}:́  %{R%}:́   ! there are diacritics here for stress-marking
 
 %{ы%}:0 %{ы%}:ы ! CCы -> CыC rule
+0:ы
 ;
 
 Sets
@@ -28,6 +29,9 @@ VV:0 <=> _ V: / [ AC: | :0 ] ;
 "unstressed schwa deletion"
 ы:0 <=> _ AC:0 ;
         _ V / [ AC: | :0 ] ; ! and vowel cluster
+
+"epenthetic schwa"
+0:ы <=> C [ ?:0 ]* _ Son C / [ ?:0 ] ;
 
 "CCы -> CыC"
 %{ы%}:ы <=> C+ _ C+ ы:0 ;
