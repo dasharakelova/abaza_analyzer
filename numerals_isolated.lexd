@@ -54,7 +54,7 @@ LEXICON Thousand
 зыкь<num>:з{ы}кьы{R} # phon: зыкь > зкьы
 
 LEXICON Iter
-<iter>:ны{D}
+<iter>:н
 
 LEXICON Link
 <link>:и{R}[link_add]
