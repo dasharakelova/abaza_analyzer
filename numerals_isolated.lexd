@@ -12,7 +12,7 @@ NumRoot2 OneSuf2 # 2
 
 Num11-19
 ((NumRoot2|NumRoot3|NumRoot4) Iter)? Twenty # 20, 40, 60, 80
-NumRoot700-900 OneSuf100 # 100
+NumRoot200-600 OneSuf100 # 100
 (NumRoot2|NumRoot3|NumRoot4|NumRoot5-9[|[5,6]]) NumRoot200-600 # 200-900 # phon: шв > ышв/вы
 NumRoot5-9[|[7,8,9]]                            NumRoot700-900 # 200-900 # phon: шв > ышв/вы
 ((NumRoot2|NumRoot3|NumRoot4|NumRoot5-9|NumRoot10) Iter)? Thousand # 1000-10000
