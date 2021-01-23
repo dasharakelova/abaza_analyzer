@@ -1,0 +1,60 @@
+PATTERNS
+Personal
+Personal FullForm (Instrumental[-obl]|Additive|Caritive)
+Demonstrative
+Demonstrative[obl] (Instrumental[obl]|Locative|Lative|Adverbial)
+Demonstrative[obl] PluralPr (Plural)
+
+# personal pronouns
+
+LEXICON Personal
+са<1sg>:са
+ба<2sg><f>:ба
+уа<2sg><m>:уа
+ла<3sg><f>:ла
+йа<3sg><m>:йа
+йа<3sg><n>:йа
+хӏа<1pl>:хӏа
+шва<2pl>:шва
+да<3pl>:да
+
+LEXICON Demonstrative
+ари<dem><prox>:ари
+ари<dem><prox><obl>:ара[obl]
+ани<dem><med>:ани
+ани<dem><med><obl>:ана[obl]
+ауи<dem><dist>:ауи
+ауи<dem><dist><obl>:ауа[obl]
+
+LEXICON FullForm
+<full>:ра
+
+LEXICON Instrumental
+<inst>:ла
+<inst>:ыла[obl]
+
+LEXICON Additive
+<add>:гьи
+<add>:и
+
+LEXICON Caritive
+<car>:дъа
+
+LEXICON Lative
+<lat>:хь
+
+LEXICON Locative
+<loc>:ъа
+
+LEXICON Adverbial
+<adv>:са
+
+LEXICON PluralPr
+<pl>:т
+
+LEXICON Plural
+<pl>:ква
+
+# посессивные глагольные формы типа счӏвква? (Аркадьев eng 15)
+# интеррогатив -и? (Табулова 93)
+
