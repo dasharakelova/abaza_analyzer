@@ -4,8 +4,10 @@ Personal FullForm (Instrumental[-obl]|Additive|Caritive)
 Demonstrative
 Demonstrative[obl] (Instrumental[obl]|Locative|Lative|Adverbial)
 Demonstrative[obl] PluralPr (Plural)
-
-# personal pronouns
+Indefinite
+Indefinite[inst] Instrumental[-obl]
+Definite Indefinite[def]
+Indefinite[neg] Negative
 
 LEXICON Personal
 са<1sg>:са
@@ -25,6 +27,16 @@ LEXICON Demonstrative
 ани<dem><med><obl>:ана[obl]
 ауи<dem><dist>:ауи
 ауи<dem><dist><obl>:ауа[obl]
+
+LEXICON Indefinite
+закӏы<num><n>:закӏы[inst,neg]
+заджвы<num><h>:заджвы[neg]
+заджвы<num><h>:аджвы[neg]
+кӏара<indef>:кӏара[inst]
+зджьакӏы<indef>:зджьакӏы[def]
+аджвырагӏв<indef>:аджвырагӏв
+аджвзаджвыкI<indef>:аджвзаджвыкI
+зджьара<indef>:зджьара
 
 LEXICON FullForm
 <full>:ра
@@ -55,6 +67,12 @@ LEXICON PluralPr
 LEXICON Plural
 <pl>:ква
 
+LEXICON Definite
+<def>:а
+
+LEXICON Negative
+<neg>:гьи
+
 # посессивные глагольные формы типа счӏвква? (Аркадьев eng 15)
 # интеррогатив -и? (Табулова 93)
-
+# реципрок азакӏы-азакӏы /а(за)джв-а(за)джв?
