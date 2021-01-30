@@ -1,9 +1,9 @@
 PATTERNS
 Personal
-Personal FullForm (Instrumental[-obl]|Additive|Caritive)
+Personal FullForm (Instrumental[-obl]|Additive|Caritive)?
 Demonstrative
 Demonstrative[obl] (Instrumental[obl]|Locative|Lative|Adverbial)
-Demonstrative[obl] PluralPr (Plural)
+Demonstrative[obl] > PluralPr > Plural
 Indefinite
 Indefinite[inst] Instrumental[-obl]
 Definite Indefinite[def]
