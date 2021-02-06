@@ -1,1 +1,5 @@
 *.hfst
+*.txt.res
+*.txt.mchar
+*.pass.txt
+*.ignore.txt

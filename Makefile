@@ -1,13 +1,25 @@
 .DEFAULT_GOAL := check
+
+tests = garik.csv
+test_sources = $(shell sed -s 1d $(tests) | cut -d, -f5 | sort -u)
+
 %.lexd.hfst: %.lexd
 	lexd $< | hfst-txt2fst -o $@
 %.ana.hfst: %.gen.hfst
 	hfst-invert $< -o $@
 %.twol.hfst: abaza.twol
 	hfst-twolc $< -o $@
-%.gen.hfst: %.lexd.hfst %.twol.hfst
+%.pregen.hfst: %.lexd.hfst %.twol.hfst
 	hfst-compose-intersect $^ -o $@
-check-gen: numerals_isolated.gen.hfst pairtest.txt
-	bash compare.sh $^
+%.gen.hfst: %.pregen.hfst %.postgen.hfst
+	hfst-compose $^ -o $@
+%.postgen.hfst: drop-accent.twol.hfst
+	cp $< $@
+%.pass.txt: $(tests)
+	awk -F, '$$5 == "$*" && $$4 == "pass" {print $$1 ":" $$3}' $^  | sort -u > $@
+%.ignore.txt: $(tests)
+	awk -F, '$$5 == "$*" && $$4 == "ignore" {print $$1 ":" $$3}' $^  | sort -u > $@
+check-gen: numerals_isolated.gen.hfst $(foreach t,$(test_sources),$(t).pass.txt $(t).ignore.txt)
+	for t in $(test_sources); do echo $$t; bash compare.sh $< $$t.ignore.txt; bash compare.sh $< $$t.pass.txt || exit $$?; done
 check: check-gen
 
