@@ -1,13 +1,13 @@
 .DEFAULT_GOAL := check
 
-tests = garik.csv
+tests = tests.csv
 test_sources = $(shell sed -s 1d $(tests) | cut -d, -f5 | sort -u)
 
 %.lexd.hfst: %.lexd
 	lexd $< | hfst-txt2fst -o $@
 %.ana.hfst: %.gen.hfst
 	hfst-invert $< -o $@
-%.twol.hfst: abaza.twol
+%.twol.hfst: %.twol
 	hfst-twolc $< -o $@
 %.pregen.hfst: %.lexd.hfst %.twol.hfst
 	hfst-compose-intersect $^ -o $@

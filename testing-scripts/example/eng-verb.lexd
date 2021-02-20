@@ -1,0 +1,15 @@
+PATTERNS
+
+VerbStem VerbEndings
+
+LEXICON VerbStem
+run<v>:run
+hit<v>:hit
+kite<v>:kite
+slow<v>:slow
+fast<v>:fast
+
+LEXICON VerbEndings
+<pres-ctn>:>ing
+<past>:>ed
+<fut>:

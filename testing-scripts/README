@@ -1,0 +1,13 @@
+a collection of scripts for analysing hfst generators
+
+Scripts perform analysis of tests pairs against the transducer,
+identifying missing stems/lemmas and noting forms with slightly
+disagreeing glosses/analyses.
+
+The scripts come *sigh* in the form of a makefile and some bash
+scripts, and are run on all files matching `*-test`.
+
+A stupid and deliberately incorrect English verb generator is included
+as a sample.
+
+All materials are licensed under GNU Affero GPL-3; see COPYING.

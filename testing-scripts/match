@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# Copyright 2020-2021 Nick Howell
+# SPDX-License-Identifier: AGPL-3
+
+if [[ $# -eq 0 ]]; then
+	echo "
+match: search for missing pairs
+
+usage: 
+  match <generator.hfst> < unrecognised-pairs.txt
+
+" >&2
+	exit 1
+fi
+
+echo "distance:test-in:test-out:gen-in:gen-out"
+
+while read l; do
+	tape=( ${l//:/ } )
+	pieces=( $(echo "${tape[0]}" | sed 's/\([^<>]\+\)</ \1 </' | sed 's/^ //') )
+	if [[ ${#pieces[@]} -eq 2 ]]; then
+		pieces=( "" "${pieces[@]}" )
+	fi
+	nontail="${pieces[0]}${pieces[1]}"
+	tail_tags=( $(echo "${pieces[2]}" | sed 's/></> </g') )
+	echo hfst-fst2strings -X obey-flags -p "$nontail" "$1" >&2
+	hfst-fst2strings -X obey-flags -p "$nontail" "$1" \
+	| sed "s@^$nontail@@" \
+	| while read s; do
+		matches=0
+		s_in=${s%%:*}
+		s_tail_tags=( ${s_in//></> </} )
+		for t in ${tail_tags[@]}; do
+			if [[ "$s" = *"$t"* ]]; then 
+				matches=$(( $matches + 1 ))
+			fi
+		done
+		tag_diff=$((${#s_tail_tags[@]} - ${#tail_tags[@]}))
+		if [[ $tag_diff -lt 0 ]]; then
+			tag_diff=$(( - $tag_diff ))
+		fi
+		[[ ${matches} -gt 1 ]] && echo "$(( $matches - $tag_diff)):$l:$nontail$s"
+	done
+done

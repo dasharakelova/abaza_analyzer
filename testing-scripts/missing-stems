@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Copyright 2020-2021 Nick Howell
+# SPDX-License-Identifier: AGPL-3
+
+if [[ $# -eq 0 ]]; then
+	echo "missing-stems: locate missing stems in a generator
+
+usage: missing-stems <generator.hfst> < generator-tests
+" >&2
+	exit 1
+fi
+
+cut -f1 -d: \
+| sed 's/\([^<>]\+\)<.*$/\1/' \
+| sort -u \
+| while read l; do
+	hfst-fst2strings -X obey-flags -p "$l" "$1"  -q -n1 | grep -q . || echo "$l"
+done \
+| sed 's/<.*>//' \
+| sort -u

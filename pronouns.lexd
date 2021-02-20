@@ -36,7 +36,7 @@ LEXICON Indefinite
 зджьакӏы<indef>:зджьакӏы{D}[def] # зджьакӏы - последняя шва есть
 аджвырагӏв<indef>:аджвырагӏв
 аджвзаджвыкI<indef>:аджвзаджвыкI
-зджьара<indef>:зджьара
+зджьара<indef>:зджьара[neg]
 
 LEXICON FullForm
 <full>:ра

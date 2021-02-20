@@ -1,0 +1,13 @@
+Alphabet a b c d e f g h i j k l m n o p q r s t u v w x y z >:0 ;
+
+Sets
+C = b c d f g h j k l m n p q r s t v w x y z ;
+CC = b c d f g h j k l m n p q r s t v x y z ;
+V = a e i o u ;
+
+Rules
+"double consonant"
+0:X <=> V X >: _ V ; where X in CC ;
+
+"drop doubled vowel"
+X:0 <=> _ >: V ; where X in V ;
