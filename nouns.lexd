@@ -1,0 +1,36 @@
+PATTERNS
+(Definite|Posessive)? Stem Plural[h]? Plural [-h]? Indefinite? Case? Additive?
+
+LEXICON Stem
+пхӏа<noun>:пхӏа
+
+LEXICON Definite
+<def>:а
+
+LEXICON Posessive
+<1sg>:сы
+<1pl>:хӏы
+<2sg><m>:уы
+<2sg><f>:бы
+<2pl>:швы
+<3sg><m>:йы
+<3sg><f>:лы
+<3sg><n>:а
+<3pl>:ры
+<rel>:зы
+
+LEXICON Plural
+<pl><h>:чва[h]
+<pl><n>:ква[n]
+
+LEXICON Indefinite
+<indef>:кӏ
+
+LEXICON Case
+<inst>:ла
+<adv>:та
+<lim>:дза
+
+LEXICON Additive
+<add>:гьи
+<add>:и
