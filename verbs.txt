@@ -1,0 +1,24 @@
+PATTERNS
+(Definite|Posessive)? Stem Plural[h]? Plural [-h]? Indefinite? Case? Additive?
+Abs (Sub,Neg) Rep (Pot,Invol) Appl DirPrev Loc IO Erg NegPref Caus Soc Root DirSuf EvOp Pl TA NegSuf (Past, Mod) (Sub, Force, Emph)
+
+LEXICON Root
+
+
+LEXICON Definite
+<def>:а
+
+LEXICON Posessive
+
+
+LEXICON Plural
+
+
+LEXICON Indefinite
+
+
+LEXICON Case
+
+
+LEXICON Additive
+

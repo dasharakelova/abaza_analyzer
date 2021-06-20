@@ -42,7 +42,7 @@ LEXICON FullForm
 <full>:ра
 
 LEXICON Instrumental
-<inst>:ла
+<inst>:ла{R}
 <inst>:ыла[obl]
 
 LEXICON Additive
@@ -65,7 +65,7 @@ LEXICON PluralPr
 <pl>:т
 
 LEXICON Plural
-<pl>:ква
+<pl>:ква{D}
 
 LEXICON Definite
 <def>:а{D} # азджьакӏ, последняя шва выпадает

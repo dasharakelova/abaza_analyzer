@@ -12,6 +12,7 @@ Sets
 C = п б ф в м т д ӏ н р ц з c ч ж ш щ ь ъ й л к г х у ;
 VV = а е и о ;
 V = а е и ы у о ;
+VVV = а е и ы о ;
 Son = н р л й м з ;
 
 Stress = ́;
@@ -23,8 +24,9 @@ R = %{R%};
 AC = %{F%} %{D%} %{R%} ;
 
 Rules
+
 "vowel claster"
-VV:0 <=> _ V: / [ AC: | :0 ] ;
+VV:0 <=> _ VVV: / [ AC: | :0 ] ;
 
 "unstressed schwa deletion"
 ы:0 <=> [ .#. | C ] [ V: AC:0 ]* _ AC:0 [ V: AC:0 ]* [ C | .#. ] / [ 0:? ] ;
