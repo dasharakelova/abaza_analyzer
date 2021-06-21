@@ -1,13 +1,20 @@
 PATTERNS
 # Transitive verbs
-Abs (Sub,Neg) Rep (Pot,Invol) Appl DirPrev Loc ErgIO? ErgIO NegPref Caus Soc TransVerbRoot DirSuf EvOp Pl TA NegSuf (Past, Mod) (Sub, Force, Emph)
+Abs NegPref? Rep (Pot|Invol) Appl DirPrev Loc ErgIO? ErgIO[-caus] NegSuf? Soc TransVerbRoot DirSuf EvOp VerbPl? Aspect Tense[fut]? Tense? NegSuf? (Past, Mod) Decl? VerbAdv? Add?
+Abs NegPref? Rep (Pot|Invol) Appl DirPrev Loc ErgIO? ErgIO[caus] NegSuf? Caus Soc TransVerbRoot DirSuf EvOp VerbPl? Aspect Tense[fut]? Tense? NegSuf? (Past, Mod) Decl? VerbAdv? Add? # caus
+AbsRefl NegPref? Rep (Pot|Invol) Appl DirPrev Loc ErgIO[-caus] NegSuf? Soc TransVerbRoot DirSuf EvOp VerbPl? Aspect Tense[fut]? Tense? NegSuf? (Past, Mod) Decl? VerbAdv? Add? # refl
+Abs NegPref? Rep (Pot|Invol) Appl DirPrev Loc ErgIO[caus] NegSuf? Caus Soc TransVerbRoot DirSuf EvOp VerbPl? Aspect Tense[fut]? Tense? NegSuf? (Past, Mod) Decl? VerbAdv? Add? #caus, refl
+NegPref? Rep (Pot|Invol) Appl DirPrev Loc Rec NegSuf? Soc TransVerbRoot DirSuf EvOp VerbPl Aspect Tense[fut]? Tense? NegSuf? (Past, Mod) Decl? # rec
 
 # Intransitive verbs
 
-Abs (Sub,Neg) Rep (Pot,Invol) Appl DirPrev Loc ErgIO? NegPref Caus Soc VerbRoot DirSuf EvOp Pl TA NegSuf (Past, Mod) (Sub, Force, Emph)
+Abs NegPref? Rep (Pot,Invol) Appl DirPrev Loc ErgIO? NegSuf? Caus Soc IntrVerbRoot DirSuf EvOp VerbPl? Aspect Tense[fut]? Tense? NegSuf? (Past, Mod) Decl? VerbAdv? Add?
 
 LEXICON TransVerbRoot
-т<verb>:т
+т<verb>:т{R}
+
+LEXICON IntrVerbRoot
+
 
 LEXICON Abs
 <1sg><abs>:сы{D}
@@ -24,6 +31,12 @@ LEXICON Abs
 <3pl><abs>:йы{D}
 <3pl><abs>:
 <rel><abs>:йы{D}
+<rel.mnr>:шы
+<rel.tmp>:ан
+<rel.loc>:ъа
+
+LEXICON AbsRefl
+<rfl><abs>:тшы
 
 LEXICON ErgIo
 <1sg><erg/io>:сы{D}
@@ -38,18 +51,35 @@ LEXICON ErgIo
 <3sg><f><erg/io>:лы{D}
 <3sg><n><erg/io>:на{D}
 <3sg><n><erg/io>:а{D}
-<3pl><erg/io>:ры{D}
-<3pl><erg/io>:ды{D}
+<3pl><erg/io>:ры{D}[noncaus]
+<3pl><erg/io>:ды{D}[caus]
 <rel><erg/io>:зы{D}
 
-LEXICON NegPref
+LEXICON Rec
+<rec>:
 
+LEXICON NegPref
+<neg>:гьи
 
 LEXICON Negsuf
+<neg>:мы
 
+LEXICON Caus
+<caus>:ры{R}
 
-LEXICON Case
+LEXICON Tense
+<aor>:
+<prs>:и
+<fut>:шы{R}[fut]
+<fut><nfin>:ры{R}[fut]
+<pst>:н
+<npst>:пӏ
+<pst><nfin>:з
+<msd>:ра
 
+LEXICON Aspect
+<ipf>:у
+<ipf>:уа
 
-LEXICON Additive
-
+LEXICON Decl
+<dcl>:тӏ

@@ -1,0 +1,7 @@
+PATTERNS
+Uninfl
+
+LEXICON Uninfl
+ауаса<conj>:ауаса
+апны<adpos>:апны
+<rec>:
