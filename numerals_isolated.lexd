@@ -63,8 +63,8 @@ LEXICON Link
 <link>:[no_link]
 
 LEXICON OneSuf1
-<n>:акӏы
-<h>:аджвы
+<n>:акӏы{D}
+<h>:аджвы{D}
 
 LEXICON OneSuf2
 <n>:ба{D}
