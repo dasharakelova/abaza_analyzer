@@ -1,7 +1,7 @@
 PATTERNS
 # Transitive verbs
-Abs (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? ErgIO? ErgIO[-caus] NegSuf? TransVerbRoot DirSuf? EvOp? VerbPl? Aspect Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add?
-Abs (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? ErgIO? ErgIO[caus] NegSuf? Caus TransVerbRoot DirSuf? EvOp? VerbPl? Aspect Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add? # caus
+Abs (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? ErgIO[-erg]? ErgIO[-caus,-io] NegSuf? TransVerbRoot DirSuf? EvOp? VerbPl? Aspect Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add?
+Abs (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? ErgIO[-erg]? ErgIO[caus,-io] NegSuf? Caus TransVerbRoot DirSuf? EvOp? VerbPl? Aspect Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add? # caus
 AbsRefl (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? ErgIO[-caus] NegSuf? TransVerbRoot DirSuf? EvOp? VerbPl? Aspect? Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add? # refl
 Abs (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? ErgIO[caus] NegSuf? Caus TransVerbRoot DirSuf? EvOp? VerbPl? Aspect? Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add? #caus, refl
 Abs (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? Rec[tr] NegSuf? Soc? TransVerbRoot DirSuf? EvOp? VerbPl? Aspect? Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add? # rec
@@ -597,8 +597,10 @@ LEXICON ErgIO
 <3sg><f><erg/io>:лы{D}
 <3sg><n><erg/io>:на{D}
 <3sg><n><erg/io>:а{D}
-<3pl><erg/io>:ры{D}[noncaus] #R erg?
-<3pl><erg/io>:ды{D}[caus]
+<3pl><erg/io>:ры{D}[noncaus,io] #
+<3pl><erg/io>:ры{R}[noncaus,erg]
+<3pl><erg/io>:ды{D}[caus,io]
+<3pl><erg/io>:ды{R}[caus,erg]
 <rel><erg/io>:зы{R}
 
 LEXICON Rec
@@ -734,7 +736,7 @@ LEXICON Appl
 <ben>:зы{D} # dasha's observations
 <mal>:чвы
 <com>:цы
-<inst>:ла
+<ins>:ла{D} # dasha's observations
 
 LEXICON Pot
 <pot>:зы

@@ -316,7 +316,7 @@ LEXICON Indef
 <indef>:кӏ
 
 LEXICON Case
-<inst>:ла{R}
+<ins>:ла{R}
 <adv>:та{R} # check
 <lim>:дза{R} # check
 
