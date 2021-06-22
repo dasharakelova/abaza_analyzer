@@ -4,11 +4,11 @@ Abs (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? ErgIO? ErgIO[-caus] NegSuf? Tran
 Abs (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? ErgIO? ErgIO[caus] NegSuf? Caus TransVerbRoot DirSuf? EvOp? VerbPl? Aspect Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add? # caus
 AbsRefl (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? ErgIO[-caus] NegSuf? TransVerbRoot DirSuf? EvOp? VerbPl? Aspect? Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add? # refl
 Abs (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? ErgIO[caus] NegSuf? Caus TransVerbRoot DirSuf? EvOp? VerbPl? Aspect? Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add? #caus, refl
-Abs (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? Rec NegSuf? Soc? TransVerbRoot DirSuf? EvOp? VerbPl? Aspect? Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add? # rec
+Abs (NegPref|RelAdv)? Rep? Pot? Appl? Dir? Loc? Rec[tr] NegSuf? Soc? TransVerbRoot DirSuf? EvOp? VerbPl? Aspect? Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add? # rec
 
 # Intransitive verbs
 
-Abs NegPref? Rep? Pot? Appl? Dir? Loc? ErgIO? NegSuf? Caus? Soc? IntrVerbRoot DirSuf? EvOp VerbPl? Aspect? Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add?
+Abs NegPref? Rep? Pot? Appl? Dir? Loc? (ErgIO|Rec[intr])? NegSuf? Caus? Soc? IntrVerbRoot DirSuf? EvOp VerbPl? Aspect? Tense[fut]? Tense? NegSuf? Mood? (Decl|Emp)? Subord? Add?
 
 LEXICON TransVerbRoot
 ршра<verb>:рш{D}
@@ -634,7 +634,7 @@ LEXICON AbsRefl
 
 LEXICON ErgIO
 <1sg><erg/io>:сы{D}
-<1sg><erg/io>:сы{D}
+<1sg><erg/io>:зы{D}
 <1pl><erg/io>:хӏы{D}
 <2sg><m><erg/io>:уы{D}
 <2sg><f><erg/io>:бы{D}
@@ -650,7 +650,8 @@ LEXICON ErgIO
 <rel><erg/io>:зы{D}
 
 LEXICON Rec
-<rec>:аба
+<rec>:аба[tr]
+<rec>:ай[intr]
 
 LEXICON NegPref
 <neg>:гьы{D}
@@ -784,6 +785,5 @@ LEXICON Pot
 
 LEXICON Rep
 <rep>:ата
-
 
 # конвербы с ква
