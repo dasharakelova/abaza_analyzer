@@ -304,10 +304,10 @@ LEXICON Posessive
 <3sg><f>:лы{D}
 <3sg><n>:а{D}
 <3pl>:ры{D}
-<rel>:зы{D}
+<rel>:зы{R}
 
 LEXICON PlH
-<pl><h>:чва
+<pl><h>:чва{D}
 
 LEXICON PlN
 <pl><n>:ква{D}
@@ -317,9 +317,9 @@ LEXICON Indef
 
 LEXICON Case
 <inst>:ла{R}
-<adv>:та
-<lim>:дза
+<adv>:та{R} # check
+<lim>:дза{R} # check
 
 LEXICON Additive
-<add>:гьи
-<add>:и
+<add>:гьи{D} # dasha's observations
+<add>:и{D} # dasha's observations
