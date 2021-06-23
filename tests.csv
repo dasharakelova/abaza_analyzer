@@ -118,14 +118,14 @@ analysis,value,gold,mustpass,source,page
 да<3pl><full><add>,,дари,pass,Arkadiev,15
 да<3pl><full><car>,,дарадъа,pass,Arkadiev,15
 ари<dem><prox>,,ари,pass,Tabulova,94
-ари<dem><prox><obl><inst>,,арыла,pass,Arkadiev,16
+ари<dem><prox><obl><inst>,,арыла,ignore,Arkadiev,16
 ари<dem><prox><obl><loc>,,араъа,pass,Arkadiev,16
 ари<dem><prox><obl><lat>,,арахь,pass,Arkadiev,16
 ари<dem><prox><obl><adv>,,араса,pass,Arkadiev,16
 ари<dem><prox><obl><pl>,,арат,pass,Tabulova,95
 ари<dem><prox><obl><pl><pl>,,аратква,pass,Tabulova,95
 ани<dem><med>,,ани,pass,Tabulova,94
-ани<dem><med><obl><inst>,,аныла,pass,Arkadiev,16
+ани<dem><med><obl><inst>,,аныла,ignore,Arkadiev,16
 ани<dem><med><obl><loc>,,анаъа,pass,Arkadiev,16
 ани<dem><med><obl><lat>,,анахь,pass,Arkadiev,16
 ани<dem><med><obl><adv>,,анаса,pass,Arkadiev,16

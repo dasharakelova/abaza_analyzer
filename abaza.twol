@@ -1,6 +1,6 @@
 Alphabet
 п б ф в м у т д ӏ н р ц з c ч ж ш щ ь ъ й л к г х а:0 е:0 и:0 ы:0 у:0 о:0 а е и ы у о
->:0
+%>:0
 %{F%}:0 %{D%}:0 %{R%}:0
 %{F%}:́  %{D%}:́  %{R%}:́   ! there are diacritics here for stress-marking
 
@@ -9,7 +9,7 @@ Alphabet
 ;
 
 Sets
-C = п б ф в м т д ӏ н р ц з c ч ж ш щ ь ъ й л к г х у ;
+C = п б ф в м т д ӏ н р ц з с ч ж ш щ ь ъ й л к г х у ;
 VV = а е и о ;
 V = а е и ы у о ;
 VVV = а е и ы о ;
@@ -29,7 +29,7 @@ Rules
 VV:0 <=> _ VVV: / [ AC: | :0 ] ;
 
 "unstressed schwa deletion"
-ы:0 <=> [ .#. | C ] [ V: AC:0 ]* _ AC:0 [ V: AC:0 ]* [ C | .#. ] / [ 0:? ] ;
+ы:0 <= [ .#. | C ] [ V: AC:0 ]* _ AC:0 [ V: AC:0 ]* [ C | .#. ] / [ 0: ] ;
         _ V: / [ AC: | :0 ] ; ! and vowel cluster
 
 "epenthetic schwa"
