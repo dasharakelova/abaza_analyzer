@@ -1,13 +1,13 @@
 PATTERNS
 Personal
-Personal FullForm (Instrumental[-obl]|Additive|Caritive)?
+Personal FullForm (ӏnstrumental[-obl]|Additive|Caritive)?
 Demonstrative
-Demonstrative[obl] (Instrumental[obl]|Locative|Lative|Adverbial)
+Demonstrative[obl] (ӏnstrumental[obl]|Locative|Lative|Adverbial)
 Demonstrative[obl] > PluralPr > Plural
-Indefinite
-Indefinite[inst] Instrumental[-obl]
-Definite Indefinite[def]
-Indefinite[neg] Negative
+ӏndefinite
+ӏndefinite[inst] ӏnstrumental[-obl]
+Definite ӏndefinite[def]
+ӏndefinite[neg] Negative
 
 LEXICON Personal
 са<1sg>:са
@@ -28,20 +28,21 @@ LEXICON Demonstrative
 ауи<dem><dist>:ауи
 ауи<dem><dist><obl>:ауа[obl]
 
-LEXICON Indefinite
+LEXICON ӏndefinite
 закӏы<num><n>:закӏы{D}[inst,neg] # закӏы, а не закӏ
 заджвы<num><h>:заджвы{D}[neg] # заджвы
 заджвы<num><h>:аджвы{D}[neg] # аджвы
 кӏара<indef>:кӏара[inst]
 зджьакӏы<indef>:зджьакӏы{D}[def] # зджьакӏы - последняя шва есть
 аджвырагӏв<indef>:аджвырагӏв
-аджвзаджвыкI<indef>:аджвзаджвыкI
+аджвзаджвыкӏ<indef>:аджвзаджвыкӏ
 зджьара<indef>:зджьара[neg]
+зымгӏва<indef>:зы{D}мгӏва{R}[neg]
 
 LEXICON FullForm
 <full>:ра
 
-LEXICON Instrumental
+LEXICON ӏnstrumental
 <inst>:ла{R}
 <inst>:ыла[obl]
 

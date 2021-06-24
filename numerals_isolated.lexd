@@ -11,12 +11,12 @@ NumRoot2 OneSuf2 # 2
 (NumRoot3|NumRoot4|NumRoot5-9|NumRoot10)[-3] OneSuf3-10[-3] # 4-10
 
 Num11-19
-((NumRoot2|NumRoot3|NumRoot4) Iter)? Twenty # 20, 40, 60, 80
+((NumRoot2|NumRoot3|NumRoot4) ӏter)? Twenty # 20, 40, 60, 80
 NumRoot200-600 OneSuf100 # 100
 (NumRoot2|NumRoot3|NumRoot4|NumRoot5-9[|[5,6]]) NumRoot200-600 # 200-900 # phon: шв > ышв/вы
 NumRoot5-9[|[7,8,9]]                            NumRoot700-900 # 200-900 # phon: шв > ышв/вы
-((NumRoot2|NumRoot3|NumRoot4|NumRoot5-9|NumRoot10) Iter)? Thousand # 1000-10000
-Num11-19 Iter Thousand # 11000-19000
+((NumRoot2|NumRoot3|NumRoot4|NumRoot5-9|NumRoot10) ӏter)? Thousand # 1000-10000
+Num11-19 ӏter Thousand # 11000-19000
 
 
 LEXICON NumRoot1
@@ -53,7 +53,7 @@ LEXICON Twenty
 LEXICON Thousand
 зыкь<num>:з{ы}кьы{R} # phon: зыкь > зкьы
 
-LEXICON Iter
+LEXICON ӏter
 <iter>:н
 
 LEXICON Link
