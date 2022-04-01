@@ -11,5 +11,6 @@ The project is distributed under the GNU General Public License v3.0.
 Different grammatical descriptions were used when writing rules for the transducer as well as some linguistic data collected during field trips in 2017-2021 (see the paper for more info). The lexicographic basis of the transducer comes from [“Abazinka”](http://www.abazinka.ru) online resource. Also, [Abaza-Russian parallel news corpus ](https://linghub.ru/abaza_rus_corpus/search) and corpus of spoken Abaza were used for developing and testing the analyzer.
 
 
-# How to cite:
+# To cite
 Developing morphological analyzers for low-resource languages of the Caucasus. D. Arakelova, D. Ignatiev. Term paper at the School of Linguistics, NRU HSE, 2021.
+Аракелова Д., Игнатьев Д. Разработка морфологических анализаторов для малоресурсных языков Кавказа. НИУ ВШЭ. Москва, 2021. 22 с.
