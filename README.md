@@ -7,7 +7,7 @@ The analyzer is a part of a larger project at NRU HSE designing NLP tools for lo
 
 The project is distributed under the GNU General Public License v3.0.
 
-## Data
+# Data
 Different grammatical descriptions were used when writing rules for the transducer as well as some linguistic data collected during field trips in 2017-2021 (see the paper for more info). The lexicographic basis of the transducer comes from [“Abazinka”](http://www.abazinka.ru) online resource. Also, [Abaza-Russian parallel news corpus ](https://linghub.ru/abaza_rus_corpus/search) and corpus of spoken Abaza were used for developing and testing the analyzer.
 
 
